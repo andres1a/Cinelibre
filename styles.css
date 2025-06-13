@@ -82,6 +82,7 @@ body {
   right: 1px;
   border-radius: 50%;
   cursor: pointer;
+  transition: 1s all ease-in-out;
 }
 .toggle-icon {
   color: goldenrod;
@@ -136,10 +137,9 @@ body {
   padding: 0 20px;
 }
 
-.movie-list-wrapper{
+.movie-list-wrapper {
   position: relative;
   overflow: hidden;
-
 }
 
 .movie-list {
@@ -147,6 +147,7 @@ body {
   height: 300px;
   align-items: center;
   transform: translateX(0);
+
   transition: all 1s ease-in-out;
 }
 .movie-list-item {
@@ -160,11 +161,9 @@ body {
 }
 .movie-list-item:hover .movie-list-item-title,
 .movie-list-item:hover .movie-list-item-desc,
-.movie-list-item:hover .movie-list-item-buttom{
+.movie-list-item:hover .movie-list-item-buttom {
   opacity: 1;
 }
-
-
 
 .movie-list-item-img {
   transition: all 1s ease-in-out;
@@ -193,7 +192,7 @@ body {
   left: 50px;
   width: 230px;
   opacity: 0;
-    transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
 }
 
 .movie-list-item-buttom {
@@ -209,14 +208,47 @@ body {
   transition: 1s all ease-in-out;
 }
 
-.arrow{
+.arrow {
   font-size: 120px;
   position: absolute;
   top: 90px;
   right: 0;
-  color:lightgray;
-  opacity: .5;
+  color: lightgray;
+  opacity: 0.5;
   cursor: pointer;
+}
+.container.active {
+  background-color: white;
+}
 
+.movie-list-title.active {
+  color: black;
+}
+.navbar.active {
+  background-color: white;
+  color: black;
+}
 
+.navbar-container.active {
+  background-color: white;
+  color: black;
+}
+.sidebar.active {
+  background-color: white;
+  color: black;
+}
+.left-menu-icon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
 }
