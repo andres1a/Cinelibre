@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ciudadest</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ciudades.css">
     
 </head>
 <body>
+
 <header class="navbar">
     <div class="navbar-container">
         <h1 class="logo">CineLibre</h1>
@@ -15,11 +16,27 @@
          <ul class="menu-list">
           <li class="menu-list-item active"><a href="index.html" class="nav-link">Cartelera</a></li>
           <li class="menu-list-item">Salas</li>
-          <li class="menu-list-item">Series</li>
-          <li class="menu-list-item">Promociones</li>
+          <li class="menu-list-item"><a href="series.html" class="nav-link">Series</a></li>
+          <li class="menu-list-item"><a href="promociones"></a></li>
         </nav>
     </div>
-
 </header>
+<main>
+
+    <div class="city-container">
+        <div class="card-city-content">
+            <h2>¿Donde te encuentras?</h2>
+            <select id="card-ciudad-select">
+            <option disabled selected class="card-option">Selecciona tu ciudad</option>
+            <option value="1">Barranquilla</option>
+            <option value="2">Bogotá</option>
+            <option value="3">Medellin</option>
+            <option value="4">Cartagena</option>
+            </select>
+            <button class="card-button">Seleccionar</button>
+        </div>
+    </div>
+
+</main>
 </body>
 </html>

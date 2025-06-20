@@ -28,6 +28,7 @@ body {
   font-size: 30px;
   color: blue;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
 .menu-container {

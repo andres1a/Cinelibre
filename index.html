@@ -1,112 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diseño Películas - CineLibre</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-<body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="navbar-container">
-      <h1 class="logo">CineLibre</h1>
-      <nav class="menu-container">
-        <ul class="menu-list">
-          <li class="menu-list-item active">Inicio</li>
-          <li class="menu-list-item">Películas</li>
-          <li class="menu-list-item">Series</li>
-          <li class="menu-list-item">Popular</li>
-          <li class="menu-list-item">Trends</li>
-        </ul>
-      </nav>
-      <div class="perfil-container">
-        <img class="perfil-picture" src="assets/profile.jpg" alt="Perfil">
-        <div class="perfil-text-container">
-          <span class="perfil-text">Perfil</span>
-          <i class="fas fa-caret-down"></i>
-        </div>
-        <div class="toggle">
-          <i class="fa-solid fa-moon toggle-icon"></i>
-          <i class="fa-solid fa-sun toggle-icon"></i>
-          <div class="toggle-ball"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
-    <i class="left-menu-icon fa-solid fa-house"></i>
-    <i class="left-menu-icon fa-solid fa-users"></i>
-    <i class="left-menu-icon fa-solid fa-bookmark"></i>
-    <i class="left-menu-icon fa-solid fa-tv"></i>
-    <i class="left-menu-icon fa-solid fa-hourglass"></i>
-    <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
-  </aside>
-
-  <!-- Contenido Principal -->
-  <main class="container">
-    <div class="content-container">
-
-      <!-- Sección Destacada -->
-      <div class="featured-content" style="
-          background: linear-gradient(to bottom, rgba(0,0,0,0), #151515),
-                      url('assets/f-1.jpg');
-        ">
-        <img class="featured-title" src="assets/deadpool.png" alt="Deadpool">
-        <p class="featured-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo dolor deserunt nam assumenda ipsa eligendi dolore.
-        </p>
-        <button class="featured-button">WATCH</button>
-      </div>
-
-      <!-- Carrusel: Nuevos Lanzamientos -->
-      <div class="movie-list-container">
-        <h2 class="movie-list-title">Nuevos Lanzamientos</h2>
-        <div class="movie-list-wrapper">
-          <div class="movie-list">
-            <!-- Reemplaza src y contenido por tus 7 imágenes -->
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/1.jpg" alt="Pelicula 1">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/2.webp" alt="Pelicula 2">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/3.webp" alt="Pelicula 3">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/4.jpg" alt="Pelicula 4">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/5.jpg" alt="Pelicula 5">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/6.jpg" alt="Pelicula 6">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
-            <div class="movie-list-item">
-              <img class="movie-list-item-img" src="assets/7.jpg" alt="Karate Kid">
-              <button class="movie-list-item-buttom">Ver</button>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño Películas - CineLibre</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <h1 class="logo"><a href="ciudades.html" class="logo">CineLibre</a></h1>
+        <nav class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-list-item">Películas</li>
+            <li class="menu-list-item">Series</li>
+            <li class="menu-list-item">Popular</li>
+            <li class="menu-list-item">Trends</li>
+          </ul>
+        </nav>
+        <div class="perfil-container">
+          <img class="perfil-picture" src="assets/profile.jpg" alt="Perfil" />
+          <div class="perfil-text-container">
+            <span class="perfil-text">Perfil</span>
+            <i class="fas fa-caret-down"></i>
           </div>
-          <i class="fa-solid fa-chevron-right arrow"></i>
+          <div class="toggle">
+            <i class="fa-solid fa-moon toggle-icon"></i>
+            <i class="fa-solid fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+          </div>
         </div>
       </div>
+    </header>
 
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+      <i class="left-menu-icon fa-solid fa-house"></i>
+      <i class="left-menu-icon fa-solid fa-users"></i>
+      <i class="left-menu-icon fa-solid fa-bookmark"></i>
+      <i class="left-menu-icon fa-solid fa-tv"></i>
+      <i class="left-menu-icon fa-solid fa-hourglass"></i>
+      <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </aside>
 
-    </div>
-  </main>
+    <!-- Contenido Principal -->
+    <main class="container">
+      <div class="content-container">
+        <!-- Sección Destacada -->
+        <div
+          class="featured-content"
+          style="
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515),
+              url('assets/f-1.jpg');
+          "
+        >
+          <img
+            class="featured-title"
+            src="assets/deadpool.png"
+            alt="Deadpool"
+          />
+          <p class="featured-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo
+            dolor deserunt nam assumenda ipsa eligendi dolore.
+          </p>
+          <button class="featured-button">WATCH</button>
+        </div>
 
-  <script src="app.js"></script>
-</body>
+        <!-- Carrusel: Nuevos Lanzamientos -->
+        <div class="movie-list-container">
+          <h2 class="movie-list-title">Nuevos Lanzamientos</h2>
+          <div class="movie-list-wrapper">
+            <div class="movie-list">
+              <!-- Reemplaza src y contenido por tus 7 imágenes -->
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/1.jpg"
+                  alt="Pelicula 1"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/2.webp"
+                  alt="Pelicula 2"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/3.webp"
+                  alt="Pelicula 3"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/4.jpg"
+                  alt="Pelicula 4"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/5.jpg"
+                  alt="Pelicula 5"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/6.jpg"
+                  alt="Pelicula 6"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="assets/7.jpg"
+                  alt="Karate Kid"
+                />
+                <button class="movie-list-item-buttom">Ver</button>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
 </html>
