@@ -28,6 +28,41 @@ body {
   text-decoration: none;
   color: white;
 }
+.menu-list-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+  min-width: 220px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+.menu-list-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 
 .logo-container {
   flex: 1;

@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ciudadest</title>
-    <link rel="stylesheet" href="ciudades.css">
-    
-</head>
-<body>
-
-<header class="navbar">
-    <div class="navbar-container">
+    <link rel="stylesheet" href="ciudades.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
         <h1 class="logo">CineLibre</h1>
         <nav class="menu-container">
-         <ul class="menu-list">
-          <li class="menu-list-item active"><a href="index.html" class="nav-link">Cartelera</a></li>
-          <li class="menu-list-item">Salas</li>
-          <li class="menu-list-item"><a href="series.html" class="nav-link">Series</a></li>
-          <li class="menu-list-item"><a href="promociones"></a></li>
+          <ul class="menu-list">
+            <li class="menu-list-item active">
+              <a href="index.html" class="nav-link">Cartelera</a>
+            </li>
+            <li class="menu-list-item dropdown">
+              <a class="nav-link">Salas </a>
+              <ul id="salas-menu" class="dropdown-menu">
+
+              </ul>
+            </li>
+            <li class="menu-list-item">
+              <a href="series.html" class="nav-link">Series</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="promociones.html" class="nav-link">Promociones</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="peliculas.html" class="nav-link">Peliculas</a>
+            </li>
+          </ul>
         </nav>
-    </div>
-</header>
-<main>
-
-    <div class="city-container">
+      </div>
+    </header>
+    <main>
+      <div class="city-container">
         <div class="card-city-content">
-            <h2>¿Donde te encuentras?</h2>
-            <select id="card-ciudad-select">
-            <option disabled selected class="card-option">Selecciona tu ciudad</option>
-            <option value="1">Barranquilla</option>
-            <option value="2">Bogotá</option>
-            <option value="3">Medellin</option>
-            <option value="4">Cartagena</option>
-            </select>
-            <button class="card-button">Seleccionar</button>
+          <h2>¿Donde te encuentras?</h2>
+          <select id="card-ciudad-select">
+            <option disabled selected class="card-option">
+              Selecciona tu ciudad
+            </option>
+            <option value="Barranquilla">Barranquilla</option>
+            <option value="Bogotá">Bogotá</option>
+            <option value="Medellin">Medellin</option>
+            <option value="Cartagena">Cartagena</option>
+          </select>
+          <button class="card-button" id="card-button">Seleccionar</button>
         </div>
-    </div>
-
-</main>
-</body>
+      </div>
+    </main>
+   <script src="app.js"></script>
+  </body>
 </html>
