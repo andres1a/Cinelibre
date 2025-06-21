@@ -8,7 +8,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("assets/fondo-de-papel-tapiz-colorido-borroso-artistico.jpg");
+  background-image: url("../img/ciudades.png");
 }
 .navbar {
   width: 100%;
@@ -62,7 +62,6 @@ body {
 .menu-list-item.dropdown:hover .dropdown-menu {
   display: block;
 }
-
 
 .logo-container {
   flex: 1;
