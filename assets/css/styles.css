@@ -1,98 +1,98 @@
+/* Reset & Base */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
-
 body {
   font-family: "Roboto", sans-serif;
+  background: #151515;
+  color: #fff;
 }
 
+/* Navbar */
 .navbar {
   width: 100%;
   height: 50px;
-  background-color: black;
+  background: #000;
+  color: #fff;
 }
-
 .navbar-container {
   display: flex;
   align-items: center;
-  font-family: "Roboto", sans-serif;
   padding: 0 50px;
   height: 100%;
-  color: white;
+  font-family: inherit;
+  background: inherit;
+  color: inherit;
 }
-
 .logo-container {
   flex: 1;
 }
 .logo {
   font-size: 30px;
   color: blue;
-  font-family: "Roboto", sans-serif;
   text-decoration: none;
+  font-family: inherit;
 }
 
+/* Menu */
 .menu-container {
   flex: 6;
 }
 .menu-list {
   display: flex;
+  gap: 30px;
   list-style: none;
 }
 .menu-list-item {
-  margin-right: 30px;
+  position: relative;
+  font-weight: 400;
 }
-
 .menu-list-item.active {
   font-weight: bold;
 }
-
-.menu-list-item.dropdown {
-  position: relative;
+.menu-list-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
-
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  min-width: 220px;
+  background: #fff;
   border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   list-style: none;
   padding: 0;
   margin: 0;
   z-index: 999;
-  min-width: 220px;
 }
-
 .dropdown-menu li a {
   display: block;
   padding: 10px;
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #eee;
+  transition: background 0.2s;
 }
-
 .dropdown-menu li:last-child a {
   border-bottom: none;
 }
-
-.menu-list-item.dropdown:hover .dropdown-menu {
-  display: block;
+.dropdown-menu li a:hover {
+  background: #f0f0f0;
 }
 
-
+/* Perfil */
 .perfil-container {
   flex: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-
 .perfil-text-container {
   margin: 0 20px;
 }
-
 .perfil-picture {
   width: 32px;
   height: 32px;
@@ -100,21 +100,21 @@ body {
   object-fit: cover;
 }
 
+/* Toggle */
 .toggle {
   width: 40px;
   height: 20px;
-  background-color: white;
+  background: #fff;
   border-radius: 30px;
-  align-items: center;
   display: flex;
+  align-items: center;
   position: relative;
   padding: 2px;
 }
-
 .toggle-ball {
   width: 18px;
   height: 18px;
-  background-color: black;
+  background: #000;
   position: absolute;
   right: 1px;
   border-radius: 50%;
@@ -125,33 +125,37 @@ body {
   color: goldenrod;
 }
 
+/* Sidebar */
 .sidebar {
   width: 50px;
-  height: 100%;
-  background-color: black;
+  height: 100vh;
+  background: #000;
   position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
+  color: #fff;
 }
-
 .left-menu-icon {
-  color: white;
   font-size: 20px;
   margin-bottom: 40px;
+  color: inherit;
 }
 
+/* Main Container */
 .container {
-  background-color: #151515;
   min-height: calc(100vh - 50px);
-  color: white;
+  background: #151515;
+  color: inherit;
 }
-
 .content-container {
   margin-left: 50px;
 }
+
+/* Featured */
 .featured-content {
   min-height: 50vh;
   padding: 50px;
@@ -165,133 +169,192 @@ body {
   margin: 30px 0;
 }
 .featured-button {
-  background-color: blue;
-  color: white;
+  background: blue;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
-}
-.movie-list-container {
-  padding: 0 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.movie-list-wrapper {
+/* Movie List */
+.movie-list-container {
   position: relative;
+  margin-top: 20px;
   overflow: hidden;
 }
-
+.movie-list-wrapper {
+  position: relative;
+  overflow-x: auto;
+  padding: 0 60px 10px 50px;
+  scroll-behavior: smooth;
+}
+.movie-list-wrapper .arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+  pointer-events: all;
+}
+.movie-list-wrapper .arrow:hover {
+  color: #fff;
+}
 .movie-list {
   display: flex;
-  height: 300px;
   align-items: center;
+  gap: 20px;
+  width: 2000px;
+  height: 400px;
   transform: translateX(0);
-
   transition: all 1s ease-in-out;
 }
 .movie-list-item {
-  margin-right: 30px;
   position: relative;
-}
-.movie-list-item:hover .movie-list-item-img {
-  transform: scale(1.2);
-  margin: 0 30px;
-  opacity: 0.5;
-}
-.movie-list-item:hover .movie-list-item-title,
-.movie-list-item:hover .movie-list-item-desc,
-.movie-list-item:hover .movie-list-item-buttom {
-  opacity: 1;
-}
-
-.movie-list-item-img {
-  transition: all 1s ease-in-out;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
   border-radius: 20px;
 }
-.movie-list-item-title {
-  background-color: #333;
-  padding: 0 10px;
-  font-size: 32px;
+.movie-list-title {
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+/* Movie Item */
+.movie-list-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: filter 0.3s;
+}
+.movie-list-item .details {
+  width: 100%;
+}
+.movie-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: bottom 0.4s;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+.movie-list-item:hover .movie-overlay {
+  bottom: 0;
+}
+.movie-list-item:hover .movie-list-item-img {
+  filter: brightness(40%);
+}
+
+/* Details */
+.details-title {
+  font-size: 1.3rem;
   font-weight: bold;
-  position: absolute;
-  top: 10%;
-  left: 50px;
-  opacity: 0;
-  transition: 1s all ease-in-out;
 }
-
-.movie-list-item-desc {
-  background-color: #333;
-  padding: 10px;
-  font-size: 14px;
-  position: absolute;
-  top: 30%;
-  left: 50px;
-  width: 230px;
-  opacity: 0;
-  transition: 1s all ease-in-out;
+.details-director,
+.details-rating {
+  font-size: 0.9rem;
 }
-
+.details-tags span {
+  display: inline-block;
+  background: orange;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+.details-sinopsis {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 320px;
+}
+.details-cast {
+  display: flex;
+  gap: 6px;
+}
+.details-cast img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .movie-list-item-buttom {
-  padding: 10px;
-  background-color: blue;
-  color: white;
+  padding: 8px 14px;
+  background: blue;
+  color: #fff;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  opacity: 0;
-  transition: 1s all ease-in-out;
+  align-self: flex-start;
 }
 
+/* Arrow */
 .arrow {
   font-size: 120px;
   position: absolute;
-  top: 90px;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
+  z-index: 2;
   color: lightgray;
   opacity: 0.5;
   cursor: pointer;
+  padding: 10px;
+  transition: background 0.2s;
 }
-.container.active {
-  background-color: white;
-}
-
-.movie-list-title.active {
-  color: black;
-}
-.navbar.active {
-  background-color: white;
-  color: black;
+.arrow:hover {
+  background: rgba(255,255,255,0.2);
 }
 
-.navbar-container.active {
-  background-color: white;
-  color: black;
-}
+/* Theme Active States */
+.container.active,
+.navbar.active,
+.navbar-container.active,
 .sidebar.active {
-  background-color: white;
-  color: black;
+  background: #fff;
+  color: #000;
 }
+.movie-list-title.active,
 .left-menu-icon.active {
-  color: black;
+  color: #000;
 }
 .toggle.active {
-  background-color: black;
+  background: #000;
 }
 .toggle-ball.active {
-  background-color: white;
+  background: #fff;
   transform: translateX(-20px);
 }
-@media only screen and (max-width: 940px) {
+
+/* Responsive */
+@media (max-width: 940px) {
   .menu-container {
     display: none;
   }
 }
+
+/* Nav Link */
 .nav-link {
   color: #ecf0f1;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #fff;
 }

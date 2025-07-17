@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ▶️ MOVIES (flechas)
   const arrows = document.querySelectorAll(".arrow");
-  const movieLists = document.querySelectorAll(".movie-list");
+  const wrappers = document.querySelectorAll(".movie-list-wrapper");
 
   arrows.forEach((arrow, i) => {
-    const itemNumber = movieLists[i]?.querySelectorAll("img").length || 0;
-    let clickCounter = 0;
+    const wrapper = wrappers[i];
+    const list    = wrapper.querySelector(".movie-list");
+    const item    = list.querySelector(".movie-list-item");
+    const itemWidth = item.getBoundingClientRect().width + parseInt(getComputedStyle(list).gap || 0);
+
     arrow.addEventListener("click", () => {
-      const ratio = Math.floor(window.innerWidth / 270);
-      clickCounter++;
-      if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
-        movieLists[i].style.transform = `translateX(${
-          movieLists[i].computedStyleMap().get("transform")[0].x.value - 510
-        }px)`;
+      // Si llegamos al final, volvemos al inicio
+      if (wrapper.scrollLeft + wrapper.clientWidth >= list.scrollWidth) {
+        wrapper.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        movieLists[i].style.transform = "translateX(0)";
-        clickCounter = 0;
+        // Avanzamos un ítem
+        wrapper.scrollBy({ left: itemWidth, behavior: "smooth" });
       }
     });
   });
+
 
   // ▶️ TOGGLE
   const ball = document.querySelector(".toggle-ball");
@@ -99,4 +99,15 @@ document.addEventListener("DOMContentLoaded", () => {
       salasMenu.appendChild(li);
     });
   }
+  document.querySelectorAll('.movie-list-item').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.add('active');
+  });
+
+  const btn = card.querySelector('.btn-close');
+  btn?.addEventListener('click', e => {
+    e.stopPropagation();  // evita que también dispare el card
+    card.classList.remove('active');
+  });
+});
 });
