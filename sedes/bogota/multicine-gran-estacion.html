@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño Películas - CineLibre</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <h1 class="logo">
+          <a href="/ciudades.html" class="logo">CineLibre</a>
+        </h1>
+        <nav class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-list-item">Popular</li>
+            <li class="menu-list-item dropdown">
+              <a class="nav-link">Salas </a>
+              <ul id="salas-menu" class="dropdown-menu"></ul>
+            </li>
+            <li class="menu-list-item">Películas</li>
+            <li class="menu-list-item">Series</li>
+            <li class="menu-list-item">Popular</li>
+          </ul>
+        </nav>
+        <div class="perfil-container">
+          <img
+            class="perfil-picture"
+            src="/assets/img/profile.jpg"
+            alt="Perfil"
+          />
+          <div class="perfil-text-container">
+            <span class="perfil-text">Perfil</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="toggle">
+            <i class="fa-solid fa-moon toggle-icon"></i>
+            <i class="fa-solid fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+      <i class="left-menu-icon fa-solid fa-house"></i>
+      <i class="left-menu-icon fa-solid fa-users"></i>
+      <i class="left-menu-icon fa-solid fa-bookmark"></i>
+      <i class="left-menu-icon fa-solid fa-tv"></i>
+      <i class="left-menu-icon fa-solid fa-hourglass"></i>
+      <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+      <div class="content-container">
+        <!-- Sección Destacada -->
+        <div
+          class="featured-content"
+          style="
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515),
+              url('/assets/img/f-1.jpg');
+          "
+        >
+          <img
+            class="featured-title"
+            src="/assets/img/deadpool.png"
+            alt="Deadpool"
+          />
+          <p class="featured-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo
+            dolor deserunt nam assumenda ipsa eligendi dolore.
+          </p>
+          <button class="featured-button">WATCH</button>
+        </div>
+
+        <!-- Carrusel: Nuevos Lanzamientos -->
+        <div class="movie-list-container">
+          <h2 class="movie-list-title">Nuevos Lanzamientos</h2>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+          <div class="movie-list-wrapper">
+            <div class="movie-list">
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/1.jpg"
+                  alt="Pelicula 1"
+                />
+
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/2.webp"
+                  alt="Pelicula 2"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/3.webp"
+                  alt="Pelicula 3"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/4.jpg"
+                  alt="Pelicula 4"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/5.jpg"
+                  alt="Pelicula 5"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/6.jpg"
+                  alt="Pelicula 6"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+              <div class="movie-list-item">
+                <img
+                  class="movie-list-item-img"
+                  src="/assets/img/7.jpg"
+                  alt="Karate Kid"
+                />
+                <div class="movie-overlay">
+                  <h3 class="details-title">Thunderbolts</h3>
+                  <p class="details-director">Dirigido por Jake Schreier</p>
+                  <p class="details-rating">⭐️⭐️⭐️⭐️☆ 4/5</p>
+                  <div class="details-tags">
+                    <span>Acción</span><span>Aventura</span>
+                  </div>
+                  <p class="details-sinopsis">
+                    Película de Marvel en la que -como si de un Escuadrón
+                    suicida se tratase- un grupo de villanos son enviados a
+                    misiones por encargo del gobierno.
+                  </p>
+                  <div class="details-cast">
+                    <img src="/assets/img/thu1.jpg" alt="Actor 1" />
+                    <img src="/assets/img/thu2.jpg" alt="Actor 2" />
+                    <img src="/assets/img/thu3.jpg" alt="Actor 3" />
+                  </div>
+                  <button class="movie-list-item-buttom">Ver</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

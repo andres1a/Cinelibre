@@ -185,7 +185,7 @@ body {
 }
 .movie-list-wrapper {
   position: relative;
-  overflow-x: auto;
+  overflow-x: hidden;
   padding: 0 60px 10px 50px;
   scroll-behavior: smooth;
 }

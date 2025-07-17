@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   arrows.forEach((arrow, i) => {
     const wrapper = wrappers[i];
-    const list    = wrapper.querySelector(".movie-list");
-    const item    = list.querySelector(".movie-list-item");
-    const itemWidth = item.getBoundingClientRect().width + parseInt(getComputedStyle(list).gap || 0);
+    const list = wrapper.querySelector(".movie-list");
+    const item = list.querySelector(".movie-list-item");
+    const itemWidth =
+      item.getBoundingClientRect().width +
+      parseInt(getComputedStyle(list).gap || 0);
 
     arrow.addEventListener("click", () => {
       // Si llegamos al final, volvemos al inicio
@@ -18,7 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
 
   // ▶️ TOGGLE
   const ball = document.querySelector(".toggle-ball");
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Multicine El Tesoro",
       "Multicine Jumbo La 65",
     ],
-    Bogotá: [
+    Bogota: [
       "Multicine Gran Estación",
       "Multicine San Rafael",
       "Multicine Plaza de las Américas",
@@ -85,11 +86,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       const a = document.createElement("a");
 
-      const archivo = nombre
-        .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/[^\w\-]/g, "") + ".html";
+      const archivo =
+        `/sedes/${ciudad.toLowerCase()}/` + // <-- Cambiado a ruta absoluta
+        nombre
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/[^\w\-]/g, "") +
+        ".html";
 
       a.href = archivo;
       a.textContent = nombre;
@@ -99,15 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
       salasMenu.appendChild(li);
     });
   }
-  document.querySelectorAll('.movie-list-item').forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.add('active');
-  });
+  document.querySelectorAll(".movie-list-item").forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.add("active");
+    });
 
-  const btn = card.querySelector('.btn-close');
-  btn?.addEventListener('click', e => {
-    e.stopPropagation();  // evita que también dispare el card
-    card.classList.remove('active');
+    const btn = card.querySelector(".btn-close");
+    btn?.addEventListener("click", (e) => {
+      e.stopPropagation(); // evita que también dispare el card
+      card.classList.remove("active");
+    });
   });
-});
 });
